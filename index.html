@@ -4,157 +4,50 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>関西AI実践ラボ by ツギノメ｜事業概要・競合比較</title>
-  <meta name="description" content="関西AI実践ラボ by ツギノメの事業概要、カリキュラム、競合比較、立ち上げ計画をまとめた共有ページ。" />
+  <meta name="description" content="関西AI実践ラボ by ツギノメの事業概要、カリキュラム、競合比較、立ち上げ計画をまとめた内部共有ページ。" />
   <meta property="og:title" content="関西AI実践ラボ by ツギノメ" />
   <meta property="og:description" content="AIチャットで終わらない。AIで仕事を動かす人へ。" />
   <meta property="og:image" content="assets/top-page-image.png" />
   <style>
     :root{
-      --bg:#06111f; --bg2:#0a1c31; --panel:#0e243d; --panel2:#102b48;
-      --ink:#f7fbff; --muted:#a7b8ca; --line:rgba(255,255,255,.12);
-      --blue:#31a8ff; --cyan:#6fe8ff; --green:#48e6a0; --warn:#ffd166;
-      --paper:#f4f8fc; --paperInk:#071322; --paperMuted:#506171;
-      --radius:22px; --shadow:0 24px 80px rgba(0,0,0,.35);
+      --base:#ffffff; --soft:#f7fafc; --soft2:#eef6fb; --ink:#102033; --sub:#5b6b7c;
+      --line:#dfe9f1; --blue:#1f7ae0; --sky:#66b8f5; --green:#16a36a; --orange:#f28b30;
+      --navy:#123255; --radius:18px; --shadow:0 12px 34px rgba(18,50,85,.08);
     }
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;}
-    a{color:inherit} .wrap{width:min(1160px,calc(100% - 40px));margin:auto}.nav{position:sticky;top:0;z-index:20;background:rgba(6,17,31,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.02em}.logo img{height:26px;width:auto}.links{display:flex;gap:18px;font-size:13px;color:var(--muted)}.links a{text-decoration:none}.links a:hover{color:var(--ink)}
-    .hero{position:relative;overflow:hidden;background:radial-gradient(circle at 75% 20%,rgba(49,168,255,.24),transparent 34%),radial-gradient(circle at 12% 8%,rgba(72,230,160,.16),transparent 28%),linear-gradient(180deg,#071321 0%,#06111f 100%)}
-    .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:58px 58px;mask-image:linear-gradient(180deg,#000,transparent 80%)}
-    .hero-inner{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center;min-height:calc(100vh - 72px);padding:72px 0}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border:1px solid rgba(111,232,255,.32);border-radius:999px;color:var(--cyan);font-size:13px;font-weight:700;background:rgba(49,168,255,.08)}
-    h1{font-size:clamp(42px,6vw,76px);line-height:1.04;letter-spacing:-.055em;margin:22px 0 20px}.lead{font-size:clamp(17px,2vw,21px);color:#c4d4e5;max-width:720px}.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border-radius:999px;text-decoration:none;font-weight:800;border:1px solid var(--line)}.btn.primary{background:linear-gradient(135deg,var(--blue),var(--green));color:#04111e;border:none}.btn.secondary{color:var(--ink);background:rgba(255,255,255,.06)}
-    .hero-card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,.035));border-radius:30px;padding:14px;box-shadow:var(--shadow)}.hero-card img{width:100%;display:block;border-radius:20px;border:1px solid rgba(255,255,255,.1)}.note{font-size:12px;color:var(--muted);margin-top:10px}.metric-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}.metric{padding:16px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.045)}.metric b{display:block;font-size:22px;color:var(--green)}
-    section{padding:86px 0;border-top:1px solid var(--line)}.section-title{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:28px}.section-title h2{font-size:clamp(28px,4vw,46px);line-height:1.12;letter-spacing:-.04em;margin:0}.section-title p{margin:0;color:var(--muted);max-width:520px}.grid{display:grid;gap:18px}.grid.two{grid-template-columns:repeat(2,1fr)}.grid.three{grid-template-columns:repeat(3,1fr)}.grid.four{grid-template-columns:repeat(4,1fr)}
-    .card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.035));border-radius:var(--radius);padding:24px}.card h3{margin:0 0 10px;font-size:20px}.card p,.card li{color:#c4d4e5}.tag{display:inline-flex;margin:4px 6px 4px 0;padding:7px 10px;border-radius:999px;background:rgba(49,168,255,.11);border:1px solid rgba(49,168,255,.22);color:#cfeeff;font-size:12px;font-weight:700}.accent{color:var(--green);font-weight:800}.big-copy{font-size:clamp(25px,4vw,44px);line-height:1.28;letter-spacing:-.035em;margin:0}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.flow .step{position:relative;min-height:130px}.step-num{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--green));color:#03111c;font-weight:900;margin-bottom:14px}.step h3{font-size:17px}.step p{font-size:13px;margin-bottom:0}.curriculum .card{min-height:250px}.price{font-size:34px;font-weight:900;color:var(--ink);letter-spacing:-.04em}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.04)}table{width:100%;border-collapse:collapse;min-width:1050px}th,td{padding:16px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);font-size:13px}th{position:sticky;top:0;background:#0b223a;color:#eaf7ff;white-space:nowrap}td{color:#c4d4e5}td:first-child,th:first-child{font-weight:800;color:var(--ink)}tr:last-child td{border-bottom:none}.winner{color:var(--green);font-weight:800}.paper{background:var(--paper);color:var(--paperInk)}.paper section{border-top:1px solid rgba(7,19,34,.1)}.paper .section-title p,.paper .card p,.paper .card li{color:var(--paperMuted)}.paper .card{background:#fff;border-color:#dbe5ee;box-shadow:0 12px 36px rgba(7,19,34,.06)}.paper .tag{background:#eef7ff;color:#0b5fae;border-color:#d7ecff}.paper .table-wrap{background:#fff;border-color:#dbe5ee}.paper th{background:#0a1c31}.paper td{color:#33485c;border-bottom:1px solid #e6edf5}.paper td:first-child{color:#071322}.top-image{width:100%;border-radius:26px;border:1px solid rgba(7,19,34,.12);box-shadow:0 24px 70px rgba(7,19,34,.18)}
-    .links-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.link-card{display:flex;justify-content:space-between;gap:14px;align-items:center;padding:16px;border-radius:18px;background:rgba(255,255,255,.055);border:1px solid var(--line);text-decoration:none}.link-card span{color:var(--muted);font-size:12px}.footer{padding:46px 0;color:var(--muted);border-top:1px solid var(--line)}
-    @media(max-width:900px){.hero-inner,.grid.two,.grid.three,.grid.four{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.links{display:none}.metric-row{grid-template-columns:1fr}.section-title{display:block}.links-list{grid-template-columns:1fr}section{padding:62px 0}.hero-inner{padding:48px 0;min-height:auto}}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--base);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",system-ui,sans-serif;line-height:1.72} a{color:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    .nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{display:flex;align-items:center;gap:12px;font-weight:800}.logo img{height:25px}.links{display:flex;gap:18px;font-size:13px;color:var(--sub)}.links a{text-decoration:none}.links a:hover{color:var(--blue)}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff 0%,#f8fbfd 100%)}.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 15%,rgba(102,184,245,.18),transparent 30%),radial-gradient(circle at 20% 80%,rgba(242,139,48,.08),transparent 26%)}.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:110px;background:linear-gradient(135deg,transparent 0 45%,rgba(31,122,224,.05) 45% 55%,transparent 55%)}
+    .hero-inner{position:relative;display:grid;grid-template-columns:1fr .95fr;gap:44px;align-items:center;padding:70px 0 76px}.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid #cfe6f9;background:#f4fbff;color:#1264b8;border-radius:999px;font-size:13px;font-weight:800}.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--orange)}
+    h1{font-size:clamp(38px,5.8vw,68px);line-height:1.07;letter-spacing:-.055em;margin:22px 0 18px}.lead{font-size:clamp(16px,1.7vw,20px);color:#42556a;max-width:680px}.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:999px;text-decoration:none;font-weight:800;border:1px solid var(--line)}.btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}.btn.secondary{background:#fff;color:var(--navy)}
+    .hero-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:12px;box-shadow:var(--shadow)}.hero-card img{width:100%;display:block;border-radius:16px;border:1px solid #e8eef4}.note{font-size:12px;color:var(--sub);margin:10px 4px 0}.metric-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}.metric{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px;box-shadow:0 8px 24px rgba(18,50,85,.04);font-size:13px;color:var(--sub)}.metric b{display:block;font-size:20px;color:var(--navy)}
+    section{padding:72px 0;border-top:1px solid var(--line)}section.tint{background:var(--soft)}.section-title{display:grid;grid-template-columns:1fr minmax(280px,520px);gap:24px;align-items:end;margin-bottom:26px}.section-title h2{font-size:clamp(26px,3.5vw,42px);line-height:1.14;letter-spacing:-.04em;margin:0}.section-title p{margin:0;color:var(--sub)}.grid{display:grid;gap:16px}.grid.three{grid-template-columns:repeat(3,1fr)}.grid.four{grid-template-columns:repeat(4,1fr)}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}.card h3{margin:0 0 8px;font-size:19px}.card p,.card li{color:var(--sub)}.tag{display:inline-flex;margin:4px 6px 4px 0;padding:6px 10px;border-radius:999px;background:#f1f8ff;color:#0d64b8;border:1px solid #d8ecfc;font-size:12px;font-weight:800}.tag.orange{background:#fff6ed;color:#ad5714;border-color:#ffe3c6}.accent{color:var(--blue);font-weight:900}.big-copy{font-size:clamp(24px,3.8vw,40px);line-height:1.35;letter-spacing:-.035em;margin:0}.step-num{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#eaf5ff;color:var(--blue);font-weight:900;margin-bottom:12px}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.flow .card{min-height:132px}.curriculum .card{min-height:238px}.price{font-size:32px;font-weight:900;color:var(--navy);letter-spacing:-.04em}
+    .top-image{width:100%;border-radius:24px;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}.table-wrap{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}table{width:100%;border-collapse:collapse;min-width:1050px}th,td{padding:14px 13px;text-align:left;vertical-align:top;border-bottom:1px solid #e8eef4;font-size:13px}th{background:#f2f7fb;color:#24435f;white-space:nowrap;font-weight:900}td{color:#405469}td:first-child{font-weight:900;color:var(--ink)}tr:last-child td{border-bottom:none}.winner{background:#f4fbff;color:#0d5da8!important;font-weight:900}.winner.accent-cell{background:#ecfff6;color:#087347!important}.links-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.link-card{display:flex;justify-content:space-between;gap:14px;align-items:center;padding:15px 16px;border-radius:16px;background:#fff;border:1px solid var(--line);text-decoration:none;box-shadow:0 8px 24px rgba(18,50,85,.04)}.link-card span{color:var(--blue);font-size:12px;font-weight:800}.footer{padding:38px 0;color:var(--sub);border-top:1px solid var(--line);background:#fff}
+    .kansai-line{height:4px;background:linear-gradient(90deg,var(--blue),var(--sky),var(--green),var(--orange));border-radius:999px;margin:28px 0 0;width:min(520px,100%)}
+    @media(max-width:900px){.hero-inner,.section-title,.grid.three,.grid.four{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.links{display:none}.metric-row{grid-template-columns:1fr}.links-list{grid-template-columns:1fr}section{padding:56px 0}.hero-inner{padding:48px 0}}
   </style>
 </head>
 <body>
-  <nav class="nav">
-    <div class="wrap nav-inner">
-      <div class="logo"><img src="assets/tsuginome-logo.png" alt="ツギノメ"><span>関西AI実践ラボ</span></div>
-      <div class="links"><a href="#overview">概要</a><a href="#curriculum">講座内容</a><a href="#compare">競合比較</a><a href="#plan">立ち上げ</a><a href="#links">参考リンク</a></div>
-    </div>
-  </nav>
+  <nav class="nav"><div class="wrap nav-inner"><div class="logo"><img src="assets/tsuginome-logo.png" alt="ツギノメ"><span>関西AI実践ラボ</span></div><div class="links"><a href="#overview">概要</a><a href="#curriculum">講座内容</a><a href="#compare">競合比較</a><a href="#plan">立ち上げ</a><a href="#links">参考リンク</a></div></div></nav>
 
-  <header class="hero">
-    <div class="wrap hero-inner">
-      <div>
-        <span class="eyebrow">関西限定 / 非エンジニア向け / 0期構想</span>
-        <h1>AIチャットで<br>終わらない。<br>AIで仕事を<br>動かす人へ。</h1>
-        <p class="lead">Claude Code / Codex も活用し、リサーチ・資料作成・LP制作・業務自動化・簡易Webツールまで、実務成果物を作れるAI人材を育てる。ツギノメの実行リソース確保と月額コミュニティ収益を両立する構想。</p>
-        <div class="cta-row"><a class="btn primary" href="#compare">競合比較を見る</a><a class="btn secondary" href="#plan">0期プランを見る</a></div>
-        <div class="metric-row"><div class="metric"><b>大阪開催</b>顔が見える関係</div><div class="metric"><b>4週間</b>課題提出型</div><div class="metric"><b>選抜制</b>案件トライアル</div></div>
-      </div>
-      <div class="hero-card">
-        <img src="assets/top-page-image.png" alt="トップページイメージ">
-        <div class="note">トップページのイメージ生成案。トンマナはツギノメ寄せ。</div>
-      </div>
-    </div>
-  </header>
+  <header class="hero"><div class="wrap hero-inner"><div><span class="eyebrow">関西限定 / 非エンジニア向け / 内部検討資料</span><h1>AIチャットで<br>終わらない。<br>AIで仕事を<br>動かす人へ。</h1><p class="lead">Claude Code / Codex も活用し、リサーチ・資料作成・LP制作・業務自動化・簡易Webツールまで、実務成果物を作れるAI人材を育てる。ツギノメの実行リソース確保と月額コミュニティ収益を両立する構想。</p><div class="cta-row"><a class="btn primary" href="#compare">競合比較を見る</a><a class="btn secondary" href="#plan">0期プランを見る</a></div><div class="metric-row"><div class="metric"><b>大阪開催</b>顔が見える関係</div><div class="metric"><b>4週間</b>課題提出型</div><div class="metric"><b>選抜制</b>案件トライアル</div></div><div class="kansai-line"></div></div><div class="hero-card"><img src="assets/top-page-image.png" alt="トップページイメージ"><div class="note">白ベース・クリーン・関西らしさを少し足したトップページイメージ。</div></div></div></header>
 
   <main>
-    <section id="overview">
-      <div class="wrap">
-        <div class="section-title"><h2>事業概要</h2><p>スクール単体で大きく儲けるより、ツギノメの採用・教育・評価・外部パートナー化の仕組みとして育てる。</p></div>
-        <div class="grid three">
-          <div class="card"><h3>目的</h3><p><span class="accent">ツギノメの実行リソース確保</span>と、月額ラボによるサブスク収入の構築。</p><span class="tag">人材プール</span><span class="tag">継続課金</span></div>
-          <div class="card"><h3>対象</h3><p>関西在住のフリーランス・副業人材。非エンジニア歓迎。ただしAIチャットではなく、AIに実務を動かさせる層。</p><span class="tag">関西限定</span><span class="tag">非エンジニア</span></div>
-          <div class="card"><h3>法人導線</h3><p>法人向けはスクール内で安売りせず、AI活用・業務改善・事業推進としてツギノメ本体へ接続。</p><span class="tag">法人はツギノメへ</span></div>
-        </div>
-      </div>
-    </section>
+    <section id="overview"><div class="wrap"><div class="section-title"><h2>事業概要</h2><p>スクール単体で大きく儲けるより、ツギノメの採用・教育・評価・外部パートナー化の仕組みとして育てる。</p></div><div class="grid three"><div class="card"><h3>目的</h3><p><span class="accent">ツギノメの実行リソース確保</span>と、月額ラボによるサブスク収入の構築。</p><span class="tag">人材プール</span><span class="tag">継続課金</span></div><div class="card"><h3>対象</h3><p>関西在住のフリーランス・副業人材。非エンジニア歓迎。ただしAIチャットではなく、AIに実務を動かさせる層。</p><span class="tag">関西限定</span><span class="tag">非エンジニア</span></div><div class="card"><h3>法人導線</h3><p>法人向けはスクール内で安売りせず、AI活用・業務改善・事業推進としてツギノメ本体へ接続。</p><span class="tag orange">法人はツギノメへ</span></div></div></div></section>
 
-    <section class="paper">
-      <div class="wrap">
-        <div class="section-title"><h2>一枚で見る全体像</h2><p>Slack共有用に作成した事業概要ビジュアル。</p></div>
-        <img class="top-image" src="assets/overview.png" alt="関西AI実践ラボ 概要画像">
-      </div>
-    </section>
+    <section class="tint"><div class="wrap"><div class="section-title"><h2>一枚で見る全体像</h2><p>初期案の概要ビジュアル。今後、白ベース資料として再生成・更新可能。</p></div><img class="top-image" src="assets/overview.png" alt="関西AI実践ラボ 概要画像"></div></section>
 
-    <section id="curriculum">
-      <div class="wrap curriculum">
-        <div class="section-title"><h2>4週間カリキュラム</h2><p>コードを学ぶ講座ではなく、AIに指示して成果物を作り、確認・修正・納品する実務講座。</p></div>
-        <div class="grid four">
-          <div class="card"><div class="step-num">1</div><h3>AI基礎と指示力</h3><p>AIチャットとAIで仕事を動かす使い方の違い。指示、確認、修正依頼、品質チェック。</p><span class="tag">実行ログ</span><span class="tag">業務テーマ案</span></div>
-          <div class="card"><div class="step-num">2</div><h3>リサーチ・資料・LP</h3><p>競合調査、営業リスト、LP構成、SNS/記事原稿、提案資料アウトライン。</p><span class="tag">調査表</span><span class="tag">LPワイヤー</span></div>
-          <div class="card"><div class="step-num">3</div><h3>Claude Code / Codex</h3><p>非エンジニアでも、小さなLP・業務ツール・診断フォーム・CSV整形をAIに作らせる。</p><span class="tag">簡易Webツール</span></div>
-          <div class="card"><div class="step-num">4</div><h3>模擬案件・納品</h3><p>要件整理、作業分解、成果物チェック、報連相、修正対応。ツギノメ案件トライアルへ。</p><span class="tag">模擬納品</span><span class="tag">評価</span></div>
-        </div>
-      </div>
-    </section>
+    <section id="curriculum"><div class="wrap curriculum"><div class="section-title"><h2>4週間カリキュラム</h2><p>コードを学ぶ講座ではなく、AIに指示して成果物を作り、確認・修正・納品する実務講座。</p></div><div class="grid four"><div class="card"><div class="step-num">1</div><h3>AI基礎と指示力</h3><p>AIチャットとAIで仕事を動かす使い方の違い。指示、確認、修正依頼、品質チェック。</p><span class="tag">実行ログ</span><span class="tag">業務テーマ案</span></div><div class="card"><div class="step-num">2</div><h3>リサーチ・資料・LP</h3><p>競合調査、営業リスト、LP構成、SNS/記事原稿、提案資料アウトライン。</p><span class="tag">調査表</span><span class="tag">LPワイヤー</span></div><div class="card"><div class="step-num">3</div><h3>Claude Code / Codex</h3><p>非エンジニアでも、小さなLP・業務ツール・診断フォーム・CSV整形をAIに作らせる。</p><span class="tag">簡易Webツール</span></div><div class="card"><div class="step-num">4</div><h3>模擬案件・納品</h3><p>要件整理、作業分解、成果物チェック、報連相、修正対応。ツギノメ案件トライアルへ。</p><span class="tag">模擬納品</span><span class="tag">評価</span></div></div></div></section>
 
-    <section id="flow">
-      <div class="wrap">
-        <div class="section-title"><h2>受講後の導線</h2><p>学習で終わらせず、案件候補化までつなげる。</p></div>
-        <div class="flow">
-          <div class="card step"><div class="step-num">0</div><h3>無料説明会</h3><p>大阪で接点づくり</p></div>
-          <div class="card step"><div class="step-num">1</div><h3>4週間講座</h3><p>課題提出で実力確認</p></div>
-          <div class="card step"><div class="step-num">2</div><h3>月額ラボ</h3><p>継続学習と関係維持</p></div>
-          <div class="card step"><div class="step-num">3</div><h3>案件トライアル</h3><p>選抜制で模擬/実案件へ</p></div>
-          <div class="card step"><div class="step-num">4</div><h3>外部パートナー</h3><p>ツギノメの実行リソース化</p></div>
-        </div>
-      </div>
-    </section>
+    <section class="tint" id="flow"><div class="wrap"><div class="section-title"><h2>受講後の導線</h2><p>学習で終わらせず、案件候補化までつなげる。</p></div><div class="flow"><div class="card"><div class="step-num">0</div><h3>無料説明会</h3><p>大阪で接点づくり</p></div><div class="card"><div class="step-num">1</div><h3>4週間講座</h3><p>課題提出で実力確認</p></div><div class="card"><div class="step-num">2</div><h3>月額ラボ</h3><p>継続学習と関係維持</p></div><div class="card"><div class="step-num">3</div><h3>案件トライアル</h3><p>選抜制で模擬/実案件へ</p></div><div class="card"><div class="step-num">4</div><h3>外部パートナー</h3><p>ツギノメの実行リソース化</p></div></div></div></section>
 
-    <section class="paper" id="compare">
-      <div class="wrap">
-        <div class="section-title"><h2>競合比較表</h2><p>競合は全国オンライン・大量コンテンツ・副業訴求が中心。ツギノメは関西リアル×少人数実践×案件トライアルで差別化。</p></div>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>サービス</th><th>主な対象</th><th>形式/地域</th><th>価格感</th><th>主な内容</th><th>案件/実務接続</th><th>ツギノメ視点</th></tr></thead>
-            <tbody>
-              <tr><td>DMM 生成AI CAMP</td><td>生成AIを幅広く学びたい個人/ビジネス職</td><td>オンライン、月額学び放題</td><td>月額16,280円税込の記載</td><td>ChatGPT、Dify、画像/動画、デザイン、エンジニア、Claude Code等</td><td>実案件/コンペ訴求あり</td><td>量と価格が強い。地域密着・少人数評価で差別化。</td></tr>
-              <tr><td>SHIFT AI</td><td>AI副業/業務改善/コミュニティ志向</td><td>オンライン＋全国リアルイベント</td><td>月払い/年払い/生涯プラン</td><td>業務改善、副業、目的別AIツール、ウェビナー</td><td>収益化・案件化の情報/交流訴求</td><td>コミュニティが強い。関西限定と案件候補化を尖らせる。</td></tr>
-              <tr><td>SAMURAI ENGINEER 生成AI</td><td>個別指導でAI活用/開発を学びたい人</td><td>オンライン、マンツーマン</td><td>4週間198,000円等の記載</td><td>生成AI基礎、業務改善、Claude Code、AI協働開発</td><td>副業/収入アップ訴求</td><td>Claude Code領域も競合あり。価格・地域・実務課題で勝つ。</td></tr>
-              <tr><td>Aidemy / キカガク</td><td>AI/データサイエンスを体系的に学びたい社会人</td><td>オンライン/動画学習</td><td>高単価・給付金系</td><td>Python、AI、データ分析、DX、機械学習</td><td>転職/リスキリング寄り</td><td>学術/DSではなく、非エンジニアの実務成果物に寄せる。</td></tr>
-              <tr><td>Winスクール</td><td>通学でビジネスソフト×AIを学びたい社会人</td><td>全国教室＋オンライン</td><td>講座別</td><td>Copilot、Office、業務効率化、個人レッスン</td><td>資格/ビジネススキル寄り</td><td>通学ニーズは存在。大阪開催は差別化に使える。</td></tr>
-              <tr><td>Udemy / Zenn系</td><td>独学したい個人</td><td>オンライン教材</td><td>低価格〜無料</td><td>Claude Code、Codex、AI駆動開発の入門</td><td>弱い/なし</td><td>価格では勝たず、添削・オフライン・案件候補化で価値を出す。</td></tr>
-              <tr><td class="winner">関西AI実践ラボ</td><td class="winner">関西の非エンジニア系フリーランス/副業人材</td><td class="winner">大阪開催＋オンライン補助</td><td class="winner">0期49,800円 / 月額9,800円〜案</td><td class="winner">Claude Code / Codex、リサーチ、資料、LP、業務自動化、簡易Webツール</td><td class="winner">選抜制のツギノメ案件トライアル</td><td class="winner">関西リアル×実務課題×人材プール化が勝ち筋。</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+    <section id="compare"><div class="wrap"><div class="section-title"><h2>競合比較表</h2><p>競合は全国オンライン・大量コンテンツ・副業訴求が中心。ツギノメは関西リアル×少人数実践×案件トライアルで差別化。</p></div><div class="table-wrap"><table><thead><tr><th>サービス</th><th>主な対象</th><th>形式/地域</th><th>価格感</th><th>主な内容</th><th>案件/実務接続</th><th>ツギノメ視点</th></tr></thead><tbody><tr><td>DMM 生成AI CAMP</td><td>生成AIを幅広く学びたい個人/ビジネス職</td><td>オンライン、月額学び放題</td><td>月額16,280円税込の記載</td><td>ChatGPT、Dify、画像/動画、デザイン、エンジニア、Claude Code等</td><td>実案件/コンペ訴求あり</td><td>量と価格が強い。地域密着・少人数評価で差別化。</td></tr><tr><td>SHIFT AI</td><td>AI副業/業務改善/コミュニティ志向</td><td>オンライン＋全国リアルイベント</td><td>月払い/年払い/生涯プラン</td><td>業務改善、副業、目的別AIツール、ウェビナー</td><td>収益化・案件化の情報/交流訴求</td><td>コミュニティが強い。関西限定と案件候補化を尖らせる。</td></tr><tr><td>SAMURAI ENGINEER 生成AI</td><td>個別指導でAI活用/開発を学びたい人</td><td>オンライン、マンツーマン</td><td>4週間198,000円等の記載</td><td>生成AI基礎、業務改善、Claude Code、AI協働開発</td><td>副業/収入アップ訴求</td><td>Claude Code領域も競合あり。価格・地域・実務課題で勝つ。</td></tr><tr><td>Aidemy / キカガク</td><td>AI/データサイエンスを体系的に学びたい社会人</td><td>オンライン/動画学習</td><td>高単価・給付金系</td><td>Python、AI、データ分析、DX、機械学習</td><td>転職/リスキリング寄り</td><td>学術/DSではなく、非エンジニアの実務成果物に寄せる。</td></tr><tr><td>Winスクール</td><td>通学でビジネスソフト×AIを学びたい社会人</td><td>全国教室＋オンライン</td><td>講座別</td><td>Copilot、Office、業務効率化、個人レッスン</td><td>資格/ビジネススキル寄り</td><td>通学ニーズは存在。大阪開催は差別化に使える。</td></tr><tr><td>Udemy / Zenn系</td><td>独学したい個人</td><td>オンライン教材</td><td>低価格〜無料</td><td>Claude Code、Codex、AI駆動開発の入門</td><td>弱い/なし</td><td>価格では勝たず、添削・オフライン・案件候補化で価値を出す。</td></tr><tr><td class="winner">関西AI実践ラボ</td><td class="winner">関西の非エンジニア系フリーランス/副業人材</td><td class="winner">大阪開催＋オンライン補助</td><td class="winner">0期49,800円 / 月額9,800円〜案</td><td class="winner">Claude Code / Codex、リサーチ、資料、LP、業務自動化、簡易Webツール</td><td class="winner accent-cell">選抜制のツギノメ案件トライアル</td><td class="winner accent-cell">関西リアル×実務課題×人材プール化が勝ち筋。</td></tr></tbody></table></div></div></section>
 
-    <section id="positioning">
-      <div class="wrap">
-        <p class="big-copy">DMM/SHIFT AIが「全国オンラインで大量に学ぶ場所」なら、<br><span class="accent">ツギノメは「関西で会って、作って、案件候補になる場所」。</span></p>
-        <div class="grid three" style="margin-top:30px">
-          <div class="card"><h3>名前はAIでシンプルに</h3><p>講座名には「AIエージェント」を入れず、関西AI実践ラボとして入口を広げる。</p></div>
-          <div class="card"><h3>中身は次世代にする</h3><p>単なるAIチャット講座ではなく、Claude Code / Codexまで扱う。</p></div>
-          <div class="card"><h3>保証ではなく選抜制</h3><p>案件保証はしない。課題品質・納期・報連相を見てトライアル候補にする。</p></div>
-        </div>
-      </div>
-    </section>
+    <section class="tint" id="positioning"><div class="wrap"><p class="big-copy">DMM/SHIFT AIが「全国オンラインで大量に学ぶ場所」なら、<br><span class="accent">ツギノメは「関西で会って、作って、案件候補になる場所」。</span></p><div class="grid three" style="margin-top:26px"><div class="card"><h3>名前はAIでシンプルに</h3><p>講座名には「AIエージェント」を入れず、関西AI実践ラボとして入口を広げる。</p></div><div class="card"><h3>中身は次世代にする</h3><p>単なるAIチャット講座ではなく、Claude Code / Codexまで扱う。</p></div><div class="card"><h3>保証ではなく選抜制</h3><p>案件保証はしない。課題品質・納期・報連相を見てトライアル候補にする。</p></div></div></div></section>
 
-    <section class="paper" id="plan">
-      <div class="wrap">
-        <div class="section-title"><h2>0期立ち上げプラン</h2><p>まずは10名規模で検証し、講座品質・受講生ニーズ・案件候補化の精度を確認する。</p></div>
-        <div class="grid three">
-          <div class="card"><h3>募集条件</h3><p><span class="price">49,800円</span><br>0期モニター価格 / 定員10名 / 関西在住者優先</p></div>
-          <div class="card"><h3>月額ラボ</h3><p><span class="price">9,800円〜</span><br>月次勉強会、課題添削、案件トライアル案内、メンバー交流。</p></div>
-          <div class="card"><h3>初期KPI</h3><p>説明会20名、申込10名、完走8名、案件トライアル候補3名、月額加入5名。</p></div>
-        </div>
-      </div>
-    </section>
+    <section id="plan"><div class="wrap"><div class="section-title"><h2>0期立ち上げプラン</h2><p>まずは10名規模で検証し、講座品質・受講生ニーズ・案件候補化の精度を確認する。</p></div><div class="grid three"><div class="card"><h3>募集条件</h3><p><span class="price">49,800円</span><br>0期モニター価格 / 定員10名 / 関西在住者優先</p></div><div class="card"><h3>月額ラボ</h3><p><span class="price">9,800円〜</span><br>月次勉強会、課題添削、案件トライアル案内、メンバー交流。</p></div><div class="card"><h3>初期KPI</h3><p>説明会20名、申込10名、完走8名、案件トライアル候補3名、月額加入5名。</p></div></div></div></section>
 
-    <section id="links">
-      <div class="wrap">
-        <div class="section-title"><h2>参考リンク</h2><p>競合調査で確認した主要リンク。</p></div>
-        <div class="links-list">
-          <a class="link-card" href="https://genai.dmm.com/" target="_blank" rel="noreferrer"><b>DMM 生成AI CAMP</b><span>開く →</span></a>
-          <a class="link-card" href="https://shift-ai.co.jp/" target="_blank" rel="noreferrer"><b>SHIFT AI</b><span>開く →</span></a>
-          <a class="link-card" href="https://generative-ai.sejuku.net/" target="_blank" rel="noreferrer"><b>SAMURAI ENGINEER 生成AI</b><span>開く →</span></a>
-          <a class="link-card" href="https://premium.aidemy.net/ai/tuition/" target="_blank" rel="noreferrer"><b>Aidemy Premium</b><span>開く →</span></a>
-          <a class="link-card" href="https://www.kikagaku.ai/" target="_blank" rel="noreferrer"><b>キカガク</b><span>開く →</span></a>
-          <a class="link-card" href="https://www.winschool.jp/guidance/business/generative_ai_course.html" target="_blank" rel="noreferrer"><b>Winスクール 生成AI</b><span>開く →</span></a>
-          <a class="link-card" href="https://generative-agents.co.jp/service/edu-ai-coding" target="_blank" rel="noreferrer"><b>Generative Agents Claude Code研修</b><span>開く →</span></a>
-          <a class="link-card" href="https://zenn.dev/kasacchiful/books/ai-agent-tools-workshop" target="_blank" rel="noreferrer"><b>Zenn: Claude Code / Codex CLI入門</b><span>開く →</span></a>
-        </div>
-      </div>
-    </section>
+    <section class="tint" id="links"><div class="wrap"><div class="section-title"><h2>参考リンク</h2><p>競合調査で確認した主要リンク。</p></div><div class="links-list"><a class="link-card" href="https://genai.dmm.com/" target="_blank" rel="noreferrer"><b>DMM 生成AI CAMP</b><span>開く →</span></a><a class="link-card" href="https://shift-ai.co.jp/" target="_blank" rel="noreferrer"><b>SHIFT AI</b><span>開く →</span></a><a class="link-card" href="https://generative-ai.sejuku.net/" target="_blank" rel="noreferrer"><b>SAMURAI ENGINEER 生成AI</b><span>開く →</span></a><a class="link-card" href="https://premium.aidemy.net/ai/tuition/" target="_blank" rel="noreferrer"><b>Aidemy Premium</b><span>開く →</span></a><a class="link-card" href="https://www.kikagaku.ai/" target="_blank" rel="noreferrer"><b>キカガク</b><span>開く →</span></a><a class="link-card" href="https://www.winschool.jp/guidance/business/generative_ai_course.html" target="_blank" rel="noreferrer"><b>Winスクール 生成AI</b><span>開く →</span></a><a class="link-card" href="https://generative-agents.co.jp/service/edu-ai-coding" target="_blank" rel="noreferrer"><b>Generative Agents Claude Code研修</b><span>開く →</span></a><a class="link-card" href="https://zenn.dev/kasacchiful/books/ai-agent-tools-workshop" target="_blank" rel="noreferrer"><b>Zenn: Claude Code / Codex CLI入門</b><span>開く →</span></a></div></div></section>
   </main>
 
   <footer class="footer"><div class="wrap">© Tsuginome / Kansai AI Jissen Lab. Draft page for internal planning.</div></footer>
